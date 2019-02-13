@@ -7,11 +7,16 @@ ulimit -n 4096
 
 # Path to andoid-sdk
 #export ANDROID_HOME=/opt/boxen/homebrew/opt/android-sdk
-export PATH="$HOME/.phpenv/bin:$PATH"
-eval "$(phpenv init -)"
 export PATH="/usr/local/opt/bison/bin:$PATH"
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 # go
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
+
+export PATH=”$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+
+if [ -f $(brew --prefix)/etc/brew-wrap ];then
+  source $(brew --prefix)/etc/brew-wrap
+fi
